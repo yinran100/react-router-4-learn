@@ -1,4 +1,5 @@
 //动态路由
+import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 
 const PrimaryLayout = () => (
@@ -20,7 +21,7 @@ const PrimaryLayout = () => (
 const HomePage =() => <div>Home Page</div>
 const UsersPage = () => <div>Users Page</div>
 
-const App = () => (
+export default () => (
   <BrowserRouter>
     <PrimaryLayout />
   </BrowserRouter>
