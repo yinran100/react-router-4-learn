@@ -2,6 +2,6 @@
 import React from 'react';
 
 export default ({match}) => <div>
-  ID Page(router-macth):
+  ID Page(props.match):
   <span className="parmas">{JSON.stringify(match)}</span>
 </div>

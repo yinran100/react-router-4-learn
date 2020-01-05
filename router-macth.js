@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 const PrimaryLayout = () => (
   <div className="primary-layout">
     <header>
-      Our React Router 4 App
+      路由规则解析 （path-to-regexp）
     </header>
     <ul>
       <li><Link to="/a-b3">Home</Link></li>
