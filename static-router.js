@@ -1,5 +1,7 @@
 // V3 静态路由
 import React from 'react';
+import HomePage from './components/Home'
+import UsersPage from './components/Users'
 import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router'
 
 const PrimaryLayout = props => (
@@ -16,11 +18,6 @@ const PrimaryLayout = props => (
     </main>
   </div>
 )
-
-// Home组件
-const HomePage =() => <div>Home Page</div>
-// User组件
-const UsersPage = () => <div>Users Page</div>
 
 export default () => (
   <Router history={browserHistory}>

@@ -1,5 +1,8 @@
 //路由规则解析 （path-to-regexp）
 import React from 'react';
+import HomePage from './components/Home'
+import IDPage from './components/ID'
+import UsersPage from './components/Users'
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 
 const PrimaryLayout = () => (
@@ -21,21 +24,6 @@ const PrimaryLayout = () => (
     </main>
   </div>
 )
-// Home组件
-const HomePage = ({match}) => <div>
-  Home Page(router-macth):
-  <span className="parmas">{JSON.stringify(match)}</span>
-</div>
-// ID组件
-const IDPage = ({match}) => <div>
-  ID Page(router-macth):
-  <span className="parmas">{JSON.stringify(match)}</span>
-</div>
-// User组件
-const UsersPage = ({match}) => <div>
-  Users Page(router-macth):
-  <span className="parmas">{JSON.stringify(match)}</span>
-</div>
 
 export default () => (
   <BrowserRouter>

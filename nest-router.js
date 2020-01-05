@@ -24,21 +24,6 @@ const PrimaryLayout = () => (
     </main>
   </div>
 )
-// // Home组件
-// const HomePage = ({match}) => <div>
-//   Home Page(router-macth):
-//   <span className="parmas">{JSON.stringify(match)}</span>
-// </div>
-// // ID组件
-// const IDPage = ({match}) => <div>
-//   ID Page(router-macth):
-//   <span className="parmas">{JSON.stringify(match)}</span>
-// </div>
-// // User组件
-// const UsersPage = ({match}) => <div>
-//   Users Page(router-macth):
-//   <span className="parmas">{JSON.stringify(match)}</span>
-// </div>
 
 export default () => (
   <BrowserRouter>
