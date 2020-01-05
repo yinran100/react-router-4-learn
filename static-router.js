@@ -17,7 +17,9 @@ const PrimaryLayout = props => (
   </div>
 )
 
+// Home组件
 const HomePage =() => <div>Home Page</div>
+// User组件
 const UsersPage = () => <div>Users Page</div>
 
 export default () => (

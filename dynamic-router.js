@@ -1,6 +1,6 @@
-//动态路由
+//v4 动态路由
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 
 const PrimaryLayout = () => (
   <div className="primary-layout">
@@ -18,7 +18,9 @@ const PrimaryLayout = () => (
   </div>
 )
 
+// Home组件
 const HomePage =() => <div>Home Page</div>
+// User组件
 const UsersPage = () => <div>Users Page</div>
 
 export default () => (

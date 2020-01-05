@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-router": "3",
+    "react-router-dom": "4"
   },
   "scripts": {
     "start": "react-scripts start",
