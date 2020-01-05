@@ -18,8 +18,8 @@ const PrimaryLayout = () => (
     <main>
       <Switch>
         <Route path="/:id(\d+)" exact component={IDPage} />
-        <Route path="/users" component={UsersPage} />
-        <Route path="/*-*" component={HomePage} />
+        <Route path="/users" exact component={UsersPage} />
+        <Route path="/*-*" exact component={HomePage} />
       </Switch>
     </main>
   </div>
