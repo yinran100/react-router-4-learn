@@ -8,14 +8,15 @@ const PrimaryLayout = () => (
       Our React Router 4 App
     </header>
     <ul>
-      <li><Link to="/54">Home</Link></li>
+      <li><Link to="/a-b3">Home</Link></li>
+      <li><Link to="/54">ID</Link></li>
       <li><Link to="/users">Users</Link></li>
     </ul>
     <main>
       <Switch>
-        <Route path="/:id" exact component={HomePage} />
-        // <Route path="/:id(\d+)" exact component={HomePage} />
+        <Route path="/:id(\d+)" exact component={IDPage} />
         <Route path="/users" component={UsersPage} />
+        <Route path="/*-*" component={HomePage} />
       </Switch>
     </main>
   </div>
@@ -23,6 +24,11 @@ const PrimaryLayout = () => (
 // Home组件
 const HomePage = ({match}) => <div>
   Home Page(router-macth):
+  <span className="parmas">{JSON.stringify(match)}</span>
+</div>
+// ID组件
+const IDPage = ({match}) => <div>
+  ID Page(router-macth):
   <span className="parmas">{JSON.stringify(match)}</span>
 </div>
 // User组件
