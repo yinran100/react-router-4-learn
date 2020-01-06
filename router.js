@@ -4,8 +4,8 @@ import HomePage from './components/Home'
 import IDPage from './components/ID'
 import UsersPage from './components/Users'
 import {
-  BrowserRouter as Router, 
-  // HashRouter as Router,
+  // BrowserRouter as Router, 
+  HashRouter as Router,
   Route, Link, Switch } from 'react-router-dom'
 
 const PrimaryLayout = () => (
@@ -20,14 +20,18 @@ const PrimaryLayout = () => (
     <main>
       <Switch>
         <Route path="/" exact component={HomePage} />
-        <Route path="/:users" component={UsersPage} />
+        <Route path="/users" render={(props) => <UsersPage {...props} />} />
       </Switch>
     </main>
   </div>
 )
 
 export default () => (
-  <Router basename="/inke" 
+  <Router
+    // basename="/inke"
+    // hashType="noslash"
+    // children={onlyChild}
+    // forceRefresh={true}
     // getUserConfirmation={getConfirmation('Are you sure?')}
     >
     <PrimaryLayout />
@@ -38,3 +42,4 @@ const getConfirmation = (message, callback) => {
   const allowTransition = window.confirm(message)
   // callback && callback(allowTransition)
 }
+const onlyChild = <div>onlyChild</div>
