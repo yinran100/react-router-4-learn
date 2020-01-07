@@ -4,9 +4,20 @@ import HomePage from './components/Home'
 import IDPage from './components/ID'
 import UsersPage from './components/Users'
 import {
-  // BrowserRouter as Router, 
-  HashRouter as Router,
-  Route, Link, Switch } from 'react-router-dom'
+  BrowserRouter as Router, 
+  // HashRouter as Router,
+  Route, Link, Switch, Redirect } from 'react-router-dom'
+
+// <Redirect from="/id" to="/abc" push/>
+
+const swicthRouter = () => {
+  return <>
+      <Route path="/" exact component={HomePage} />
+      <Route path="/:users" exact render={(props) => <UsersPage {...props} />} />
+      <Route path={["/id", "/abc"]} exact render={(props) => <IDPage {...props} />} />
+      
+  </>
+}
 
 const PrimaryLayout = () => (
   <div className="primary-layout">
@@ -16,12 +27,12 @@ const PrimaryLayout = () => (
     <ul>
       <li><Link to="/">Home</Link></li>
       <li><Link to="/users">Users</Link></li>
+      <li><Link to="/id">ID</Link></li>
     </ul>
     <main>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/users" render={(props) => <UsersPage {...props} />} />
-      </Switch>
+      {
+        swicthRouter()
+      }
     </main>
   </div>
 )

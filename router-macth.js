@@ -11,14 +11,14 @@ const PrimaryLayout = () => (
       路由规则解析 （path-to-regexp）
     </header>
     <ul>
-      <li><Link to="/a-b3">Home</Link></li>
       <li><Link to="/54">ID</Link></li>
       <li><Link to="/users">Users</Link></li>
+      <li><Link to="/a-b3">Home</Link></li>
     </ul>
     <main>
       <Switch>
-        <Route path="/:id(\d+)" exact component={IDPage} />
         <Route path="/users" exact component={UsersPage} />
+        <Route path="/:id(\d+)" exact component={IDPage} />
         <Route path="/*-*" exact component={HomePage} />
       </Switch>
     </main>

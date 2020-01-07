@@ -3,7 +3,7 @@ import React from 'react';
 
 export default class Home extends React.Component {
   componentDidMount(){
-    console.log('home组件挂载')
+    console.log('home组件Props', this.props)
   }
   render(){
     const { match } = this.props

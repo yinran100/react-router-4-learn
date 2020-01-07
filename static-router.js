@@ -19,11 +19,12 @@ const PrimaryLayout = props => (
     </main>
   </div>
 )
-const MinePage = ({children}) => <div>
+const MinePage = props => <div>
   Mine Page :
-  >>>>>>>>>>>>>
+  >
+  <br/>
   {
-    children
+    props.children
   }
 </div>
 
@@ -32,7 +33,7 @@ export default () => (
     <Route path="/" component={PrimaryLayout}>
       <IndexRoute component={HomePage} />
       <Route path="/mine" component={MinePage} >
-        <Route path="users" component={UsersPage} />
+        <Route path=":users" component={UsersPage} />
       </Route>
     </Route>
   </Router>

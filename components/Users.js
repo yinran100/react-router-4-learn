@@ -3,7 +3,7 @@ import React from 'react';
 
 export default class Users extends React.Component {
   componentDidMount(){
-    console.log('Users组件挂载')
+    console.log('User组件Props', this.props)
   }
   render(){
     const { match } = this.props

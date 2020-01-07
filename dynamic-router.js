@@ -16,7 +16,7 @@ const PrimaryLayout = () => (
     </ul>
     <main>
       <Route path="/" exact component={HomePage} />
-      <Route path="/mine" component={MinePage} />
+      <Route path="/:name" component={MinePage} />
     </main>
   </div>
 )

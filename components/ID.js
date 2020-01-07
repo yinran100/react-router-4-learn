@@ -3,7 +3,7 @@ import React from 'react';
 
 export default class ID extends React.Component {
   componentDidMount(){
-    console.log('ID组件挂载')
+    console.log('ID组件Props', this.props)
   }
   render(){
     const { match } = this.props
